@@ -1,0 +1,21 @@
+# Python virtual environment
+TrackingService/.venv/
+
+# Unity generated data
+VCStudio/Library/
+VCStudio/Temp/
+VCStudio/Logs/
+VCStudio/obj/
+VCStudio/UserSettings/
+
+# Generated builds
+Builds/
+Releases/
+TrackingService/dist/
+TrackingService/build/
+
+# IDE generated files
+*.csproj
+*.sln
+*.slnx
+.vscode/
