@@ -19,3 +19,17 @@ TrackingService/build/
 *.sln
 *.slnx
 .vscode/
+
+# Python bytecode cache
+**/__pycache__/
+*.py[cod]
+
+# Unused Unity scripts
+VCStudio/Assets/Scripts/DumpScripts/
+
+# PyInstaller
+TrackingService/*.spec
+
+# Unused Unity scripts
+VCStudio/Assets/Scripts/DumpScripts/
+VCStudio/Assets/Scripts/DumpScripts.meta

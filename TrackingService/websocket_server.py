@@ -20,9 +20,6 @@ class PoseWebSocketServer:
         hand_result=None,
         face_result=None
     ):
-        # ==================================
-        # Hand 데이터
-        # ==================================
 
         hands = []
 
@@ -48,10 +45,6 @@ class PoseWebSocketServer:
                     ]
                 })
 
-        # ==================================
-        # Face Blendshape 데이터
-        # ==================================
-
         face_blendshapes = []
 
         if (
@@ -69,10 +62,6 @@ class PoseWebSocketServer:
                 }
                 for category in blendshapes
             ]
-
-        # ==================================
-        # JSON 메시지
-        # ==================================
 
         message = {
             "type": "pose",
