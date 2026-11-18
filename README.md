@@ -9,7 +9,7 @@ MCSW(MotionCaptureSW)는 일반 RGB 웹캠의 영상을 Python·MediaPipe로 분
 
 ## 프로그램 다운로드
 
-**[Windows 실행 패키지 다운로드 — MCSW Release](https://github.com/Junho-Seox/MCSW/releases/tag/MCSW)**
+**[Windows 실행 패키지 다운로드 — MCSW Release](https://github.com/Junho-Seox/MCSW/releases/tag/2027)**
 
 Release 페이지에서 `VCS-Windows.zip`을 다운로드하고 압축을 해제한 다음, 폴더에 포함된 Unity 실행 파일(`.exe`)을 실행합니다.
 
