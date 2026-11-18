@@ -21,7 +21,7 @@ Release 페이지에서 `VCS-Windows.zip`을 다운로드하고 압축을 해제
 ## 주요 기능
 
 | 구분 | 주요 기능 |
----
+|---|---|
 | 실시간 자세 추적 | MediaPipe Pose Landmarker의 3차원 World Landmarks를 이용한 상반신 자세 추정 |
 | 손 및 손가락 추적 | 양손의 Hand World Landmarks를 활용한 손목·손가락 동작 제어 |
 | 얼굴 표정 | Face Landmarker의 Blendshape 점수를 VRM 표정으로 반영 |
@@ -30,7 +30,6 @@ Release 페이지에서 `VCS-Windows.zip`을 다운로드하고 압축을 해제
 | 제스처 제어 | 양손 가로 스와이프로 배경 변경, 아래쪽 스와이프로 조명 변경 |
 | 시각적 이벤트 | 양손을 앞으로 뻗어 방패 효과, 양손을 귀 부근에 유지해 헤드셋 효과 |
 | 통합 실행 | 아바타 선택 후 Python 자동 실행, 실제 자세 데이터 수신 확인, 스튜디오 진입 |
----
 
 현재 핵심 추적 범위는 **머리·상체·팔·손·얼굴**입니다. 전신 모션 캡처를 목표로 하는 구현은 아닙니다.
 
@@ -66,6 +65,7 @@ Python에서 계산한 추적 결과를 `ws://127.0.0.1:8765`로 전달합니다
 ## 기술 스택
 
 | 영역 | 기술 |
+|---|---|
 | 클라이언트 / 3D 렌더링 | Unity 2022.3.21f1, C# |
 | 아바타 | VRM, UniVRM, Unity Humanoid |
 | 인체 추정 | Python, MediaPipe Tasks Vision (Pose / Hand / Face) |
