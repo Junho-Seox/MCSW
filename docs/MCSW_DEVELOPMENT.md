@@ -32,6 +32,7 @@
 ### 1.3 주요 기능 요약
 
 | 구분         | 구현 내용                   | 주요 코드        |
+|---|---|---|
 | 실시간 영상 입력 | Windows DirectShow 웹캠 입력, 좌우 반전, RGB 변환 | `TrackingService/main.py` |
 | 자세 추정 | Pose Landmarker의 3D World Landmarks | `TrackingService/main.py` |
 | 손 추정 | 최대 양손 Hand World Landmarks | `TrackingService/main.py` |
@@ -246,6 +247,7 @@ IK 경로에는 다음 보정 장치가 있다.
 `FaceRetargeter.cs`는 `PoseWebSocketClient`가 전달한 MediaPipe Blendshape 점수를 읽어 `Vrm10Instance.Runtime.Expression`의 표정 가중치에 반영한다. 대표적 매핑은 다음과 같다.
 
 | MediaPipe 입력          | VRM Expression 출력 |
+|---|---|
 | `eyeBlinkLeft`, `eyeBlinkRight` | `BlinkLeft`, `BlinkRight` 또는 통합 `Blink` |
 | `jawOpen` | `Aa` |
 | `mouthSmileLeft`, `mouthSmileRight` | `Happy` |
@@ -353,6 +355,7 @@ powershell -ExecutionPolicy Bypass -File .\Scripts\PrepareRelease.ps1 -UnityBuil
 ### 8.2 주요 기술적 문제와 해결 방식
 
 | 개발 중 문제    | 원인·해결 방향                           | 관련 항목 |
+|---|---|---|
 | Windows 웹캠 입력 실패 | Media Foundation 경로 대신 DirectShow 기반 캡처 사용 | `main.py`의 `CAP_DSHOW` |
 | Pose/Hand/Face의 좌표 부호 및 좌우 혼동 | 공통 좌표 정규화와 Hand 레이블 교환 옵션을 분리 | `CoordinateNormalizer` |
 | 정적인 자세에서 관절 흔들림 | 속도 적응형 One Euro 필터 적용 | `OneEuroFilter3D` |
@@ -369,6 +372,7 @@ powershell -ExecutionPolicy Bypass -File .\Scripts\PrepareRelease.ps1 -UnityBuil
 현재까지 확인된 사용자 실행 과정과 코드 구조를 구분하여 다음과 같이 기록한다.
 
 | 검증 항목 | 확인 기준 | 상태 |
+|---|---|---|
 | Python 단독 추적 | `.venv`에서 실행하여 웹캠 Pose/Hand/Face 추적 | **수동 실행 정상 동작 확인** |
 | Unity 메인 씬 아바타 동작 | 웹캠 움직임이 아바타에 반영 | **개발 환경에서 동작 확인** |
 | 아바타 선택 및 Python 자동 실행 | 메뉴에서 다음 클릭 후 Python 프로세스 시작 | **개발 환경에서 동작 확인** |
@@ -412,6 +416,7 @@ Python 단독 실행이 정상이라면 종료한 뒤 Unity에서 메인 메뉴�
 ### 9.2 문제 해결
 
 | 증상 | 확인할 사항 |
+|---|---|
 | Python을 찾을 수 없음 | `TrackingService/.venv/Scripts/python.exe` 존재, 폴더의 상대 위치 |
 | 모델 파일 로딩 실패 | `.task` 모델의 이름·위치·패키징 경로 |
 | WebSocket 연결 실패 | 8765 포트 점유, Python 프로세스 실행 여부, 방화벽 및 예외 로그 |
